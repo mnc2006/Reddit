@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+unless Link.exists?(:url => "http://huffingtonpost.com")
+  Link.create!(:title => "Huffington Post", :url => "http://huffingtonpost.com")
+end
